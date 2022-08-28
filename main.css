@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+}
+
+:root {
+    --jump-1-seconds: 9s;
+    --jump-1-timing-function: ease-out;
+    --jump-1-delay: 2s;
+    --jump-1-iteration-count: 1;
+    --jump-1-fill-mode: forwards;
+}
+
+body {
+    background: url('assets/canyon-g1a870c5cf_1920.jpg') center center/cover no-repeat;
+}
+
+/* Animations */
+
+.jump {
+    max-width: 50vw;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.jump-1 {
+    animation: jump-1 var(--jump-1-seconds) var(--jump-1-timing-function) var(--jump-1-delay) var(--jump-1-iteration-count) var(--jump-1-fill-mode);
+}
+
+@keyframes jump-1 {
+    18% {bottom: 30vh;}
+    30% {bottom: 32vh;}
+    49% {left: 44vw; max-width: 10%;}
+    75% {bottom: 0px; left: 44vw; max-width: 10%;}
+    96% {bottom: 46vh; left: 44vw; max-width: 4.4%;}
+    100% {bottom: 44.5vh; left: 44vw; max-width: 7%;}
+}
